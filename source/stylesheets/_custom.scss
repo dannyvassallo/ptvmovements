@@ -136,6 +136,9 @@ footer{
   .footer-copyright{
     color: $ptv-red !important;
   }
+  .btn{
+    color: white !important;
+  }
   &:before{
     content: '';
     height: 119px;

@@ -2,9 +2,9 @@
 var proto = 'https://',
 s3 = 's3.amazonaws.com/',
 bucket= 'myfangate.com/',
-folder = 'ptvmp3/',
-rando = 'RBfY8gI8fEWt8w0b2ivM/',
-filename = '0cMOSQrKKNhDnYkTYZQJ',
+folder = 'ptvmovements/',
+rando = 'gJbAW4uPsRGRo5t0PZ5Z/',
+filename = 'Dma6T1f7LOoTgbgcbiOY',
 ext = '.zip';
 
 function IhTs8iP6Sk(){

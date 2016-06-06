@@ -1,11 +1,34 @@
-main{
+// PUT CUSTOM SCSS / SASS HERE
+@font-face {
+    font-family: 'special_eliteregular';
+    src: url('../fonts/specialelite-webfont.eot');
+    src: url('../fonts/specialelite-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/specialelite-webfont.woff2') format('woff2'),
+         url('../fonts/specialelite-webfont.woff') format('woff'),
+         url('../fonts/specialelite-webfont.ttf') format('truetype'),
+         url('../fonts/specialelite-webfont.svg#special_eliteregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+  font-family: 'special_eliteregular';
+}
+
+$ptv-red: #BB1212;
+
+main, footer{
   background-image: url('https://s3.amazonaws.com/myfangate.com/ptvmovements/paper.jpg');
   background-repeat: repeat;
 }
 
+main{
+  padding-bottom: 100px;
+}
+
 .container{
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .full-w{
@@ -21,6 +44,19 @@ main{
   left: 0;
   right: 0;
   opacity: 0.7;
+  z-index: 1;
+}
+
+.texture{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url('https://s3.amazonaws.com/myfangate.com/ptvmovements/texture.png');
+  background-repeat: repeat;
+  background-position: bottom center;
+  opacity: 0.3;
   z-index: 0;
 }
 
@@ -29,7 +65,7 @@ main{
   position: relative;
 }
 
-.left{
+.left-gutter{
   width: 200px;
   position: fixed;
   height: 100%;
@@ -37,11 +73,10 @@ main{
   bottom: 0;
   left: 0;
   background-repeat: repeat-y;
-  background-size: cover;
   background-image: url('https://s3.amazonaws.com/myfangate.com/ptvmovements/left.png');
 }
 
-.right{
+.right-gutter{
   width: 200px;
   position: fixed;
   height: 100%;
@@ -49,43 +84,65 @@ main{
   bottom: 0;
   right: 0;
   background-repeat: repeat-y;
-  background-size: cover;
   background-image: url('https://s3.amazonaws.com/myfangate.com/ptvmovements/right.png');
 }
 
 @media (min-width: 992px){
-  .left{
+  .left-gutter{
     width: 300px;
+    background-size: cover;
   }
-  .right{
+  .right-gutter{
     width: 300px;
+    background-size: cover;
   }
 }
 
 
 @media (max-width: 768px){
-  .left{
+  .left-gutter{
     left: -5%;
   }
-  .right{
+  .right-gutter{
     right: -5%;
   }
 }
 
 @media (max-width: 600px){
-  .left{
+  .left-gutter{
     left: -10%;
   }
-  .right{
+  .right-gutter{
     right: -10%;
   }
 }
 
 @media (max-width: 500px){
-  .left{
+  .left-gutter{
     left: -20%;
   }
-  .right{
+  .right-gutter{
     right: -20%;
+  }
+}
+
+footer{
+  position: relative;
+  z-index: 999;
+  margin-top: 0 !important;
+  a,p,h1,h2,h3,h4,h5,
+  .white-text,
+  .grey-text,
+  .footer-copyright{
+    color: $ptv-red !important;
+  }
+  &:before{
+    content: '';
+    height: 119px;
+    width: 100%;
+    background-repeat: repeat-x;
+    background-image: url("https://s3.amazonaws.com/myfangate.com/ptvmovements/tornpaperfooter.png");
+    margin-top: -86px;
+    position: absolute;
   }
 }

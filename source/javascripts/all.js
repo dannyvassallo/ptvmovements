@@ -4,4 +4,5 @@
 //= require _validate
 //= require _validateform
 //= require _additional
+//= require _remove-shadow
 //= require _custom

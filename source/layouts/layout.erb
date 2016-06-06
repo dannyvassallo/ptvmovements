@@ -14,12 +14,15 @@
   </head>
 
   <body class="<%= page_classes %>">
-    <%= partial 'layouts/partials/navbar' %>
     <main>
       <!-- CONTENT SHOWS HERE -->
       <%= yield %>
+      <div class="spatter"></div>
+      <div class="texture"></div>
+      <div class="left-gutter"></div>
+      <div class="right-gutter"></div>
     </main>
-    <%= partial 'layouts/partials/footer' %>
+    <%= partial "layouts/partials/footer" %>
     <%= javascript_include_tag :all %>
   </body>
 </html>

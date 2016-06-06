@@ -1,1 +1,290 @@
 // PUT CUSTOM SCSS / SASS HERE
+@font-face {
+    font-family: 'special_eliteregular';
+    src: url('../fonts/specialelite-webfont.eot');
+    src: url('../fonts/specialelite-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/specialelite-webfont.woff2') format('woff2'),
+         url('../fonts/specialelite-webfont.woff') format('woff'),
+         url('../fonts/specialelite-webfont.ttf') format('truetype'),
+         url('../fonts/specialelite-webfont.svg#special_eliteregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+  font-family: 'special_eliteregular';
+}
+
+$ptv-red: #BB1212;
+
+main, footer{
+  background-image: url('https://s3.amazonaws.com/myfangate.com/ptvmovements/paper.jpg');
+  background-repeat: repeat;
+}
+
+main{
+  padding-bottom: 100px;
+}
+
+.container{
+  position: relative;
+  z-index: 2;
+}
+
+.full-w{
+  width: 100%;
+}
+
+.spatter{
+  background-image: url('https://s3.amazonaws.com/myfangate.com/ptvmovements/spatter.png');
+  background-repeat: repeat;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.texture{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url('https://s3.amazonaws.com/myfangate.com/ptvmovements/texture.png');
+  background-repeat: repeat;
+  background-position: bottom center;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.quizz-container{
+  z-index: 1;
+  position: relative;
+}
+
+.left-gutter{
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-y;
+  background-image: url('https://s3.amazonaws.com/myfangate.com/ptvmovements/left.png');
+}
+
+.right-gutter{
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat-y;
+  background-image: url('https://s3.amazonaws.com/myfangate.com/ptvmovements/right.png');
+}
+
+@media (min-width: 992px){
+  .left-gutter{
+    width: 300px;
+    background-size: cover;
+  }
+  .right-gutter{
+    width: 300px;
+    background-size: cover;
+  }
+}
+
+
+@media (max-width: 768px){
+  .left-gutter{
+    left: -5%;
+  }
+  .right-gutter{
+    right: -5%;
+  }
+}
+
+@media (max-width: 600px){
+  .left-gutter{
+    left: -10%;
+  }
+  .right-gutter{
+    right: -10%;
+  }
+}
+
+@media (max-width: 500px){
+  .left-gutter{
+    left: -20%;
+  }
+  .right-gutter{
+    right: -20%;
+  }
+}
+
+footer{
+  position: relative;
+  z-index: 999;
+  margin-top: 0 !important;
+  a,p,h1,h2,h3,h4,h5,
+  .white-text,
+  .grey-text,
+  .footer-copyright{
+    color: $ptv-red !important;
+  }
+  .btn{
+    color: white !important;
+  }
+  &:before{
+    content: '';
+    height: 119px;
+    width: 100%;
+    background-repeat: repeat-x;
+    background-image: url("https://s3.amazonaws.com/myfangate.com/ptvmovements/tornpaperfooter.png");
+    margin-top: -86px;
+    position: absolute;
+  }
+}
+
+.r3466056248{
+  @extend .btn;
+  @extend .ptv-red;
+}
+#hidden_iframe{
+  display: none;
+}
+
+#form-zone{
+  // overflow-x: hidden;
+  background-repeat: repeat;
+  z-index: 0;
+  margin-bottom: 50px !important;
+  #entry{
+    z-index: 999;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  .form{
+    border: 30px solid white;
+    border-image: url("https://s3.amazonaws.com/myfangate.com/ptvmovements/border.png") 100;
+    .the-form{
+      margin-bottom: 0;
+      background-image: url('https://s3.amazonaws.com/myfangate.com/ptvmovements/flatpaper.jpg');
+      background-repeat: repeat;
+    }
+  }
+}
+
+/* label color */
+ .input-field label {
+   color: $ptv-red;
+ }
+ /* label focus color */
+ .input-field input:not([type]):focus + label , .input-field input[type=email]:focus + label {
+   color: $ptv-red;
+ }
+ /* label underline focus color */
+ .input-field input:not([type]):focus , .input-field input[type=email]:focus {
+   border-bottom: 1px solid $ptv-red;
+   box-shadow: 0 1px 0 0 $ptv-red;
+ }
+ /* valid color */
+ .input-field input:not([type]).valid, .input-field input[type=email].valid {
+   border-bottom: 1px solid $ptv-red;
+   box-shadow: 0 1px 0 0 $ptv-red;
+ }
+ /* invalid color */
+ .input-field input:not([type]).invalid , .input-field input[type=email].invalid {
+   border-bottom: 1px solid $ptv-red;
+   box-shadow: 0 1px 0 0 $ptv-red;
+ }
+ /* icon prefix focus color */
+ .input-field .prefix.active {
+   color: $ptv-red;
+ }
+
+input{
+  color: black;
+}
+
+input[type="email"], input:not([type]){
+  border-bottom: 1px solid $ptv-red;
+}
+
+input[type="checkbox"].filled-in:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $ptv-red;
+    background-color: $ptv-red;
+    z-index: 0;
+}
+
+input[type="checkbox"].filled-in:checked+label:before {
+    top: 0;
+    left: 1px;
+    width: 8px;
+    height: 13px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    -webkit-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+input[type="checkbox"].filled-in:not(:checked)+label:after {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 2px solid $ptv-red !important;
+    top: 0px;
+    z-index: 0;
+}
+
+span.error{
+  display: none !important;
+}
+
+div.toast.red{
+  z-index: 99999999999999999999999 !important;
+  position: relative;
+}
+
+.ptv-red,
+.ptv-red:hover,
+.ptv-red:active,
+.ptv-red:focus{
+  background-color: $ptv-red;
+}
+
+.ptv-red-text{
+  color: $ptv-red;
+}
+
+// #form-zone{
+//   margin-bottom: 0 !important;
+// }
+
+.shadowed {
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.4));
+  filter: url(#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#444')";
+}
+
+.quiz{
+  border: 30px solid white;
+  border-image: url("https://s3.amazonaws.com/myfangate.com/ptvmovements/border.png") 100;
+  .row{
+    background-image: url('https://s3.amazonaws.com/myfangate.com/ptvmovements/flatpaper.jpg');
+    background-repeat: repeat;
+    margin-bottom: 0 !important;
+  }
+}

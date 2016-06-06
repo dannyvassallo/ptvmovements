@@ -146,3 +146,133 @@ footer{
     position: absolute;
   }
 }
+
+.r3466056248{
+  @extend .btn;
+  @extend .ptv-red;
+}
+#hidden_iframe{
+  display: none;
+}
+
+#form-zone{
+  // overflow-x: hidden;
+  background-repeat: repeat;
+  z-index: 0;
+  min-height: 660px;
+  #entry{
+    z-index: 999;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  .form{
+    border: 30px solid pink;
+    border-image: url("https://s3.amazonaws.com/myfangate.com/ptvmovements/border.png") 100;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
+    .the-form{
+      margin-bottom: 0;
+      background-image: url('https://s3.amazonaws.com/myfangate.com/ptvmovements/flatpaper.jpg');
+      background-repeat: repeat;
+    }
+  }
+}
+
+/* label color */
+ .input-field label {
+   color: $ptv-red;
+ }
+ /* label focus color */
+ .input-field input:not([type]):focus + label , .input-field input[type=email]:focus + label {
+   color: $ptv-red;
+ }
+ /* label underline focus color */
+ .input-field input:not([type]):focus , .input-field input[type=email]:focus {
+   border-bottom: 1px solid $ptv-red;
+   box-shadow: 0 1px 0 0 $ptv-red;
+ }
+ /* valid color */
+ .input-field input:not([type]).valid, .input-field input[type=email].valid {
+   border-bottom: 1px solid $ptv-red;
+   box-shadow: 0 1px 0 0 $ptv-red;
+ }
+ /* invalid color */
+ .input-field input:not([type]).invalid , .input-field input[type=email].invalid {
+   border-bottom: 1px solid $ptv-red;
+   box-shadow: 0 1px 0 0 $ptv-red;
+ }
+ /* icon prefix focus color */
+ .input-field .prefix.active {
+   color: $ptv-red;
+ }
+
+input{
+  color: white;
+}
+
+input[type="email"], input:not([type]){
+  border-bottom: 1px solid $ptv-red;
+}
+
+input[type="checkbox"].filled-in:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $ptv-red;
+    background-color: $ptv-red;
+    z-index: 0;
+}
+
+input[type="checkbox"].filled-in:checked+label:before {
+    top: 0;
+    left: 1px;
+    width: 8px;
+    height: 13px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    -webkit-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+input[type="checkbox"].filled-in:not(:checked)+label:after {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 2px solid $ptv-red !important;
+    top: 0px;
+    z-index: 0;
+}
+
+span.error{
+  display: none !important;
+}
+
+div.toast.red{
+  z-index: 99999999999999999999999 !important;
+  position: relative;
+}
+
+.ptv-red,
+.ptv-red:hover,
+.ptv-red:active,
+.ptv-red:focus{
+  background-color: $ptv-red;
+}
+
+.ptv-red-text{
+  color: $ptv-red;
+}
+
+#form-zone{
+  margin-bottom: 0 !important;
+}
+
+.shadowed {
+  -webkit-filter: drop-shadow(2px 6px 0px rgba(0,0,0,0.2));
+  filter: url(#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
